@@ -1,6 +1,6 @@
 <ion-content>
   <app-header></app-header>
-
+<!-- Hero -->
   <section class="hero pt-14 pb-14 px-4 sm:pb-28 sm:pt-32 sm:px-16 ">
     <div class="sm:mx-auto sm:w-full text-center text-white">
       <div class="flex flex-col gap-6">
@@ -15,7 +15,7 @@
       </div>
     </div>
   </section>
-
+<!-- Discover -->
   <section class=" bg-[#FFF9E6] py-14 px-4 sm:py-28 sm:discover">
     <div class="sm:mx-auto sm:w-full text-center">
     <div class="text-center">
@@ -57,4 +57,54 @@
     </div> 
   </div>
   </section> 
+<!-- Footer in large screens -->
+  <footer class="hidden sm:block sm:px-16 sm:mx-auto sm:w-full sm:py-20">
+    <div class="sm:mx-auto sm:w-full">
+      <div class="line h-[1px] bg-black"></div>
+      <div class="flex flex-row justify-between mt-8">
+        <div class="flex flex-row ">
+          <p class="font-normal text-sm underline leading-[21px] mr-6">Privacy Policy</p>
+          <p class="font-normal text-sm underline leading-[21px] mr-6">Terms of Service</p>
+          <p class="font-normal text-sm underline leading-[21px] mr-6">Cookies Settings</p>
+        </div>
+        <div class="">
+          <p>© 2023 MyEdu. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer in small screens -->
+  <footer class="block sm:hidden px-5 mx-auto w-full py-12">
+    <div class="">
+      <div class="">
+        <a href="" (click)="navigateToHome()">
+        <img src="../../../assets/dark-logo.png" alt="" srcset="">
+        </a>
+        <div class="flex flex-col my-6">
+          <a href="" class="font-semibold text-base leading-6 my-2">Link One</a>
+          <a href="" class="font-semibold text-base leading-6 my-2">Link Two</a>
+          <a href="" class="font-semibold text-base leading-6 my-2">Link Three</a>
+          <a href="" class="font-semibold text-base leading-6 my-2">Link Four</a>
+          <a href="" class="font-semibold text-base leading-6 my-2">Link Five</a>
+        </div>
+        <div>
+          <p class="font-semibold text-base leading-6">Subscribe</p>
+          <input type="email" placeholder="Enter your Email" class="block p-4 border border-black bg-white w-full mt-3">
+          <button class="block p-4 border-solid border border-black bg-white w-full mt-3 text-base font-normal">Subscribe</button>
+          <small class="mt-4">By subscribing you agree to with our <span class="underline">Privacy Policy</span></small>
+        </div>
+      </div>
+      <div class="line h-[1px] bg-black mt-10"></div>
+      <div class="flex flex-col justify-between">
+        <div class="flex flex-col ">
+          <p class="font-normal text-sm underline leading-[21px] mt-4">Privacy Policy</p>
+          <p class="font-normal text-sm underline leading-[21px] mt-4">Terms of Service</p>
+          <p class="font-normal text-sm underline leading-[21px] mt-4">Cookies Settings</p>
+        </div>
+        <div class="mt-6">
+          <p class="text-sm">© 2023 Relume. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </ion-content>
