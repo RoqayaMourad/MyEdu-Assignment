@@ -1,20 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <app-header></app-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <section class="hero pt-14 pb-14 px-4 sm:pb-28 sm:pt-32 sm:px-16 ">
+    <div class="sm:mx-auto sm:w-full text-center text-white">
+      <div class="flex flex-col gap-6">
+        <p class="title text-[56px] leading-[67.2px] font-black">Discover the magic of our surprise box </p>
+        <p class="font-bold text-xl leading-[30px] sm:text-2xl sm:leading-9 sm:w-3/5 sm:mx-auto sm:px-16">Unleash your child's curiosity with our educational subscription box filled with fun and learning.</p>
+      </div>
+      <div class="">
+        <button class="subscribe font-black mt-6" (click)="navigateToSubscribe()">Subscribe Now</button>
+      </div>
+      <div class="flex justify-center mt-20 p-4">
+        <img src="../../assets/hero-bg.png" alt="" srcset="">
+      </div>
+    </div>
+  </section>
 </ion-content>
