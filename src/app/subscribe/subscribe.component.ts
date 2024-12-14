@@ -14,9 +14,56 @@ import { CommonModule } from '@angular/common';
     ReactiveFormsModule, CommonModule],
 })
 export class SubscribeComponent  implements OnInit {
+  subscriptionForm: FormGroup;
+  topics: string[] = ['Arabic', 'Islamic', 'English', 'History', 'Sports'];
+  selectedTopics: string[] = [];
+  days: number[] = Array.from({ length: 31 }, (_, i) => i + 1);
+  months: string[] = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+  years: number[] = Array.from({ length: 50 }, (_, i) => new Date().getFullYear() - i);
+  grades: string[] = [
+    'Grade 1',
+    'Grade 2',
+    'Grade 3',
+    'Grade 4',
+    'Grade 5',
+    'Grade 6',
+  ];
 
   constructor(private fb: FormBuilder) {
+    this.subscriptionForm = this.fb.group({
+      name: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      childName: ['', [Validators.required]],
+      birthDay: ['', [Validators.required]],
+      birthMonth: ['', [Validators.required]],
+      birthYear: ['', [Validators.required]],
+      grade: ['', [Validators.required]],
+      gender: ['', [Validators.required]],
+    });
+  }
 
+
+  
+  onSubmit() {
+    if (this.subscriptionForm.valid) {
+      console.log(this.subscriptionForm.value);
+    } else {
+      console.log('Form is invalid');
+    }
+  }
   }
 
 
