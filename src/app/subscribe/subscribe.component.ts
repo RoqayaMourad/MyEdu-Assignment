@@ -64,6 +64,18 @@ export class SubscribeComponent  implements OnInit {
       console.log('Form is invalid');
     }
   }
+
+  toggleTopic(topic: string): void {
+    // Check if the topic is already selected
+    if (this.selectedTopics.includes(topic)) {
+      // Remove the topic from the selected list
+      this.selectedTopics = this.selectedTopics.filter((t) => t !== topic);
+    } else if (this.selectedTopics.length < 3) {
+      // Add the topic to the selected list only if the limit hasn't been reached
+      this.selectedTopics.push(topic);
+    }
+    
+  }
   }
 
 
