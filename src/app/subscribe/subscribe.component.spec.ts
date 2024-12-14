@@ -26,4 +26,10 @@ describe('SubscribeComponent', () => {
     expect(formValues.email).toBe('');
     expect(formValues.childName).toBe('');
   });
+  // testing form validity
+  it('should invalidate the form if required fields are empty', () => {
+    component.subscriptionForm.controls['name'].setValue('');
+    component.subscriptionForm.controls['email'].setValue('');
+    expect(component.subscriptionForm.valid).toBeFalse();
+  });
 });
