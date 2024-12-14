@@ -48,7 +48,7 @@ Ensure you have the following tools installed on your system:
 
 ### Running Tests
 To run tests, use the following command:
-    ```bash
+    ```
     ng test
     ```
 
