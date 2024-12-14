@@ -19,4 +19,11 @@ describe('SubscribeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  // testing form initialization
+  it('should initialize the form with empty fields', () => {
+    const formValues = component.subscriptionForm.value;
+    expect(formValues.name).toBe('');
+    expect(formValues.email).toBe('');
+    expect(formValues.childName).toBe('');
+  });
 });
