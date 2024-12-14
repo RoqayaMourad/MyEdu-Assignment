@@ -2,10 +2,20 @@
     background-image: url("../../assets/bg.png");
     background-size: cover;
 }
-.divider {
-    background: #f2f2f2;
+  
+  [type="radio"]:checked + div div svg {
+    fill: #7e22ce;
+  }
+  
+  footer {
+    .line {
     height: 1px;
+      background-color: black;
+    }
+  
+    line-height: 24px;
 }
+  
 .foorterlink {
     font-family: "Inter", sans-serif;
     font-weight: 400;
@@ -18,3 +28,32 @@
     font-family: "Inter", sans-serif;
     color: #667085;
 }
+  
+  .payment {
+    padding: 8px 27.09px 8px 26px;
+    /* White */
+    background: #ffffff;
+    border: 1px solid #896af9;
+    box-shadow: 4px 4px 0px -1px #896af9;
+    border-radius: 16px;
+    color: #896af9;
+  }
+  
+  .small {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #838383;
+  }
+  
+  .summary-border {
+    border-top: 1px solid #d1c5fb;
+  }
+  
+  .divider {
+    background: #f2f2f2;
+    height: 1px;
+  }
+  
