@@ -76,6 +76,29 @@ export class SubscribeComponent  implements OnInit {
     }
     
   }
+
+  showError(controlName: string): boolean {
+    const control = this.subscriptionForm.get(controlName);
+    return !!control?.touched && control?.invalid;
+  }
+  
+  getError(controlName: string): string {
+    const controlErrors = this.subscriptionForm.get(controlName)?.errors;
+  
+    if (controlErrors?.['required']) {
+      return `${this.formatControlName(controlName)} is required`;
+    }
+  
+    if (controlErrors?.['email']) {
+      return `${this.formatControlName(controlName)} is not valid`;
+    }
+  
+    return '';
+  }
+  
+  formatControlName(controlName: string): string {
+    // Capitalize the control name or map it to a user-friendly label
+    return controlName.charAt(0).toUpperCase() + controlName.slice(1);
   }
 
 
