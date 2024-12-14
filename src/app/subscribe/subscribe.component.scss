@@ -1,7 +1,7 @@
 .form {
     background-image: url("../../assets/bg.png");
     background-size: cover;
-}
+  }
   
   [type="radio"]:checked + div div svg {
     fill: #7e22ce;
@@ -9,25 +9,25 @@
   
   footer {
     .line {
-    height: 1px;
+      height: 1px;
       background-color: black;
     }
   
     line-height: 24px;
-}
+  }
   
-.foorterlink {
+  .foorterlink {
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
     color: #475467;
-}
-
-.copyrights {
+  }
+  
+  .copyrights {
     font-family: "Inter", sans-serif;
     color: #667085;
-}
+  }
   
   .payment {
     padding: 8px 27.09px 8px 26px;
