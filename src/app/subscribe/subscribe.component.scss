@@ -1,3 +1,11 @@
+.form {
+    background-image: url("../../assets/bg.png");
+    background-size: cover;
+}
+.divider {
+    background: #f2f2f2;
+    height: 1px;
+}
 .foorterlink {
     font-family: "Inter", sans-serif;
     font-weight: 400;
@@ -5,8 +13,8 @@
     line-height: 150%;
     color: #475467;
 }
-  
+
 .copyrights {
     font-family: "Inter", sans-serif;
     color: #667085;
-  }
+}
