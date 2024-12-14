@@ -44,4 +44,17 @@ describe('SubscribeComponent', () => {
   
     expect(component.subscriptionForm.valid).toBeTrue();
   });
+  
+  // testing methods 
+  it('should add a topic if less than 3 topics are selected', () => {
+    component.toggleTopic('Arabic');
+    expect(component.selectedTopics).toContain('Arabic');
+  });
+  
+  it('should not add more than 3 topics', () => {
+    component.selectedTopics = ['Arabic', 'English', 'Sports'];
+    component.toggleTopic('Islamic');
+    expect(component.selectedTopics.length).toBe(3);
+    expect(component.selectedTopics).not.toContain('Islamic');
+  });
 });
